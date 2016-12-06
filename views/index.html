@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>show</title>
+  <link rel="stylesheet" type="text/css" href="/style/base.css">
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <style type="text/css" ></style>
+</head>
+<body>
+  <form method="post" target = "temp" action="/upload" id= "formUpload" enctype="multipart/form-data" >
+    <input type="file" id="upload" name = "upload" multiple="multiple">
+    <input type="submit" value="submmit" >
+  </form>
+  <iframe  id="temp" name="temp" height="50" style="display: none;">
+    
+  </iframe>
+  
+  <div class="search">
+      <input type="text" value="" id="ser">
+      <input type="button" value="查询" id="cha">
+  </div>
+
+  <div id="info">
+    
+  </div>
+</body>
+<script type="text/javascript">
+  $("#temp").get(0).onload = function() {
+    console.log(this)
+    $("#info").html(this.contentWindow.document.body.children)
+  };
+  $("#upload").on("change",function  (e) {
+    console.log(e.target.files)
+    if ( e.target.files ) {
+      var name  = e.target.files[0].name;
+      if (name) {
+        if (!name.match(/xlsx|xls/)) {
+          alert("NO EX")
+          e.target.value = ""
+        }
+      }
+    }
+      // var fileSize = 0;           
+      //  if (isIE && !target.files) {       
+      //    var filePath = target.value;       
+      //    var fileSystem = new ActiveXObject("Scripting.FileSystemObject");          
+      //    var file = fileSystem.GetFile (filePath);       
+      //    fileSize = file.Size;      
+      //  } else {      
+      //   fileSize = target.files[0].size;       
+      //   }     
+      //   var name=target.value;  
+      //   var fileName = name.substring(name.lastIndexOf(".")+1).toLowerCase();  
+      //   if(fileName !="jpg" && fileName !="jpeg" && fileName !="pdf" && fileName !="png" && fileName !="dwg" && fileName !="gif" ){  
+      //     alert("请选择图片格式文件上传(jpg,png,gif,dwg,pdf,gif等)！");  
+      //       target.value="";  
+      //       return  
+      //   }  
+  })
+  $("#formUpload").on("submit",function () {
+      
+  })
+  $("#cha").on("click",function  (argument) {
+    if ($("#ser").val()) {
+      qs($("#ser").val())
+    }else{
+      alert("输入")
+    }
+  })
+function qs (key) {
+    $.ajax({
+      url:'/getStudent',
+      type:'get', //GET
+      async:true,    //或false,是否异步
+      data:{
+          qs:key
+      },
+      timeout:5000,    //超时时间
+      dataType:'json',    //返回的数据格式：json/xml/html/script/jsonp/text
+      beforeSend:function(xhr){
+          console.log(xhr)
+          console.log('发送前')
+      },
+      success:function(data,textStatus,jqXHR){
+        var keys = "uuid,name,sex,tel,qq,freshs,school,education,major,company,jd,money,worktime".split(",")
+        var datas = data.data
+        if (data.mes == "success") {
+          var len = datas.length,
+              i = 0,
+              html = "<div class='flex tit'><span class='row'>id</span><span class='row'>姓名</span><span class='row'>性别</span><span class='row'>电话</span><span class='row'>QQ</span><span class='row'>毕业</span><span class='row'>学校</span><span class='row'>学历</span><span class='row'>专业</span><span class='row'>现公司</span><span class='row'>职位</span><span class='row'>薪资</span><span class='row'>工作时间</span></div>"
+          while(i<len){
+            var row = ""
+            for (var j = 0; j<keys.length; j++) {
+              row += "<span class=\"row\">"+ datas[i][keys[j]]+"</span>"
+            }
+            ++i;
+            row = "<div class=\"flex\">"+row+"</div>"
+            html += row;
+          }
+          $("#info").html(html)
+        }else{
+
+        }
+          console.log(data)
+          console.log(textStatus)
+      },
+      error:function(xhr,textStatus){
+          console.log('错误')
+          console.log(xhr)
+          console.log(textStatus)
+      },
+      complete:function(){
+          console.log('结束')
+      }
+  })
+}
+
+</script>
+</html>

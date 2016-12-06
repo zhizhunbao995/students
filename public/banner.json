@@ -1,0 +1,80 @@
+{
+	"code": 200,
+	"data": {
+		"azset": {
+			"asz": "320x50",
+			"ec": 0,
+			"eha": -1,
+			"id": 52830390,
+			"reft": 30,
+			"sco": "",
+			"swa": -1
+		},
+		"ca": {
+			"cet": 0,
+			"cst": 0,
+			"reqep": ""
+		},
+		"nws": [{
+			"id": 102,
+			"netset": {
+				"azh": 50,
+				"azw": 320,
+				"bc": "",
+				"creatives": [{
+					"cid": "2779",
+					"effects": {},
+					"mater": {
+						"click_setting": {
+							
+							"click_url": "http://mclick.simba.taobao.com/cc_im?p=%D0%AC&s=1302539494&k=321&e=ig1r%2BPiptxZDJdtUZeyrS3%2BzY47sh%2FYH1tZcxkhMItZ%2BBNhUqRqc2I%2F6Yxeot0RWkdJPKStpSrR6BnDtDsyhdYZOS7YF%2FX8wo38UTQbBglv2kT6ffzrvHOG0dx2jS9ZGCVsldoSYvUNWwaR3hrz2gl8i9BvGUTCySwbCE5LimVrQ9SrKmeBqnMg3MKQfgmotXclRFFhIV6y2fawZ4BDy8025%2F7xOc6Sl4zT2pxeJ8oWcdAfV7Q%2FsFQ4ZylclrPewg8R3dlO60QWqQmXQuSwvUtA9J7cnr%2FawvYi8LYlY%2B7b%2BOGJyIfnEjyUGarTpSENH"
+
+						},
+						"click_type": 1,
+						"img_size": "0x0",
+						"img_url": "http://afp.alicdn.com/afp-creative/creative/u113716015/d3b6061e21a0e8ebdf9208281fb045ad.png"
+					},
+					"track": {
+						"click": ["http://afptrack.alimama.com/clk?bid=0ab7411c000057a461963ad5040f96e8&pid=mm_113716015_12970064_52830390&cid=2779&mid=4167&oid=438&productType=1&qytInfoMTime=1470322843"],
+						"deli": [],
+						"down": ["http://afptrack.alimama.com/et?bid=0ab7411c000057a461963ad5040f96e8&pid=mm_113716015_12970064_52830390&cid=2779&mid=4167&oid=438&productType=1&qytInfoMTime=1470322843&eid=11&eventData="],
+						"imp": ["http://afptrack.alimama.com/imp?bid=0ab7411c000057a461963ad5040f96e8&pid=mm_113716015_12970064_52830390&cid=2779&mid=4167&oid=438&productType=1&qytInfoMTime=1470322843&e=eAOSuBH1jfGsjluw4xAyS%2B%2FbcjC7rTKP%2BQF4FjwyMDVh8osx5VJXo8M17sExVmI6&k=65"],
+						"impc": [],
+						"req": []
+					},
+					"provider":{
+        					"name":"阿里妈妈",
+       						"icon":{
+           						 "icsz":"36*20",
+            					 "iccu":"http://taobao.com",
+               					 "icu":"http://g-assets.daily.taobao.net/mm/afp-ssp/images/j.png",
+               					 "icpos":"4"         
+							}     
+					}
+				}],
+				"ctu": " http://g-assets.daily.taobao.net/mm/afp-ssp/ex_daily.html",
+				"fc": "",
+				"rtid": 8
+			},
+			"track": {
+				"click": [],
+				"deli": ["http://afptrack.alimama.com/resp?bid=0ab7411c000057a461963ad5040f96e8&pid=mm_113716015_12970064_52830390&cid=2779&mid=4167&oid=438&productType=1&qytInfoMTime=1470322843"],
+				"down": [],
+				"imp": [],
+				"impc": ["http://afptrack.alimama.com/impopt?bid=0ab7411c000057a461963ad5040f96e8&pid=mm_113716015_12970064_52830390&cid=2779&mid=4167&oid=438&productType=1&qytInfoMTime=1470322843"],
+				"req": ["http://afptrack.alimama.com/opt?bid=0ab7411c000057a461963ad5040f96e8&pid=mm_113716015_12970064_52830390&cid=2779&mid=4167&oid=438&productType=1&qytInfoMTime=1470322843"]
+			},
+			"type": 1
+		}],
+		"rvid": "57a46196498e4f2d184e2f4f",
+		"track": {
+			"click": [],
+			"deli": [],
+			"down": [],
+			"imp": [],
+			"impc": [],
+			"req": ["http://afptrack.alimama.com:80/req?pid=mm_113716015_12970064_52830390&bid=0ab7411c000057a461963ad5040f96e8&resp=1&slot_req=&slot_resp="]
+		}
+	},
+	"msg": ""
+}
