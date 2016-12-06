@@ -95,10 +95,10 @@ app.post('/upload', function (req, res, next) {
                         res.status(200);
                         res.set({'content-type': 'text/html'})
                         // connection.connect();
-                        // connection.query(insterSql + sqlcont.join(",")+";", function(err, rows, fields) {
-                        //   if (err) throw err;
-                        //   console.log('excel import sucess');
-                        // });
+                        connection.query(insterSql + sqlcont.join(",")+";", function(err, rows, fields) {
+                          if (err) throw err;
+                          console.log('excel import sucess');
+                        });
                         // connection.end();
 
                         // console.log(sqlcont.join(","))
