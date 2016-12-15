@@ -13,12 +13,9 @@ var rtrim       = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g
 /* mysql */
 var server     = app.listen(3000);
 var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : '123123',
-  database : 'students'
-});
+var config     = fs.readFileSync("./.MYSQL");
+    config     = JSON.parse(config)
+var connection = mysql.createConnection(config);
 var columns   = "uuid,name,sex,tel,qq,freshs,school,education,major,company,jd,money,worktime"
 var insterSql = "insert into info ("+columns+") values"
 var sqlcont   = []
